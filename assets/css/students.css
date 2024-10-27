@@ -1,0 +1,169 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "DM Sans";
+  background-color: #F9EEE2;
+}
+
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 343px;
+  margin-inline: auto;
+}
+
+.container button {
+  background-color: #7551DC;
+  color: #fff;
+  border-style: none;
+  padding: 14px 28px;
+  border-radius: 28px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.06em;
+}
+
+.container button:hover {
+  background-color: #DBD1FC;
+  color: #121212;
+}
+
+.header h2 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 70.56px;
+  text-align: center;
+  color: #030303;
+  padding-block: 20px;
+}
+
+.header p{
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+  text-align: center;  
+  padding-block: 20px;
+  color: #7A746E;
+}
+
+.student-count p {
+  padding-top: 20px;
+  color: #030303;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.list-item {
+  list-style: none;
+  justify-content: flex-start;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid #b6b8be;
+  border-radius: 20px;
+  padding: 20px;
+  gap: 10px;
+}
+
+.students {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.students h3 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 40px;
+  color: #030303;
+  padding-block: 20px;
+}
+
+.studentList, .womenLists, .menLists {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin-block: 20px;
+}
+
+@media (width >= 768px) {
+
+  .container {
+    max-width: 690px;
+  }
+
+  .studentList, .womenLists, .menLists {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 1280px) {
+  .container {
+    max-width: 1110px;
+  }
+
+  .studentList, .womenLists, .menLists {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
